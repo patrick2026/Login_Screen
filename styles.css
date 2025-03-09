@@ -1,0 +1,46 @@
+:root {
+  --color-primary: #226ce7;
+  --color-muted: #9ca2ae;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  gap: 50px;
+  margin: 0;
+  height: 100%;
+  background: #f1f5fb;
+  color: #474f5c;
+}
+
+@keyframes move {
+  100% {
+    transform: translate(-120px);
+  }
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+}
+.background::before,
+.background::after {
+  content: "";
+  position: inherit;
+  border-radius: 77% 53% 61% 39% / 45% 51% 49% 55%;
+  width: 100vmin;
+  height: 100vmin;
+  animation: move 10s linear infinite linear;
+}
+.background::before {
+  top: -40vmin;
+  left: -50vmin;
+  background: #65c8ff;
+}
+.background::after {
+  right: -40vmin;
+  bottom: -40vmin;
+  right: -55vmin;
+  background: #2357ad;
+  animation-direction: alternate-reverse;
+}
