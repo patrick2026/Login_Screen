@@ -59,7 +59,7 @@ body {
   box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
 }
 
-@media (min-width: 680px) {
+@media (max-width >= 780px) {
   .card {
     margin: 10vh 20px;
     width: 90vw;
